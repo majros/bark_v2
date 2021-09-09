@@ -3,11 +3,12 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Box from "@material-ui/core/Box";
-import Paper from "@material-ui/core/Paper";
+
+import CardCompanyCadetsContatcus from './CardCompanyCadetsContatcus'
 
 import company from './img/company2.webp';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
     container: {
         backgroundImage: `url(${company})`,
         backgroundPosition: 'center',
@@ -15,19 +16,9 @@ const useStyles = makeStyles((theme) => ({
         backgroundSize: 'cover',
         height: window.innerWidth > 450 ? '40vh' : '50vh',
     },
-    root: {
-        margin: "auto",
-        padding: theme.spacing(2),
-        width: '95%',
-        position: "relative",
-        top: '-50px',
-    },
-    paper: {
-        padding: theme.spacing(window.innerWidth > 450 ? 10 : 1),
-    },
-    }));
+    });
 
-export default function SimpleContainer() {
+export default function Layout() {
     const classes = useStyles();
 
     return (
@@ -45,33 +36,14 @@ export default function SimpleContainer() {
                     </Box>
                 </Typography>
             </Container>
-            <div className={classes.root}>
-                <Paper className={classes.paper} elevation={3} >
-                    <Typography component="div" variant="h4" color="textSecondary">
-                        <Box fontFamily="Roboto" textAlign="center" m={1}>
-                            <b>Bark Manning Agency</b> is a recruiting agent of Ukrainian seafarers for employment
-                            aboard vessels of foreign Shipowners.
-                        </Box>
-                    </Typography>
-                    <Typography component="div" variant="body1" color="textSecondary">
-                        <Box fontFamily="Roboto" textAlign="center" m={1}>
-                            Since created in 1992 we have gained a proper experience, good reputation and formed
-                            a professional staff team capable to select qualified crew to meet the expectations and
-                            specific requirements of our Principals for our mutual benefit.<br/>
-                            Our quality system fully complies with the requirements of International Standard -
-                            ISO 9001:2015 and Maritime Labour Convention (MLC 2006). Bark is a licensed private
-                            company certified according to International Standard ISO 9001: 2015 and as per requirements
-                            of Maritime Labour Convention (MLC 2006) by Russian Maritime Register of Shipping.
-                        </Box>
-                    </Typography>
-                    <Typography component="div" variant="h2" color="textSecondary">
-                        <Box fontFamily="Roboto" textAlign="center" m={1}>
-                            Our partners
-                        </Box>
-                    </Typography>
-                </Paper>
-            </div>
-
+            <CardCompanyCadetsContatcus/>
+            <Container>
+                <Typography component="div" variant="caption" color="textSecondary">
+                    <Box fontFamily="Roboto" textAlign="center" m={1}>
+                        www.bark.com.ua © 2021 , made by Creative Team for a better web.
+                    </Box>
+                </Typography>
+            </Container>
         </React.Fragment>
     );
 }

@@ -17,7 +17,8 @@ const theme = createTheme({
         tonalOffset: 0.2,
         text: {
             primary: "#fafafa",
-            secondary: "#000000"
+            secondary: "#545454",
+            header: "#000000",
         }
     },
     typography: {
