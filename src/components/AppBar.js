@@ -43,17 +43,38 @@ ElevationScroll.propTypes = {
 
 export default function ButtonAppBar(props) {
     const classes = useStyles();
+    const btnShow = props.onVacancies;
+    console.log(btnShow)
 
     return (
         <div className={classes.root}>
             <ElevationScroll {...props}>
-            <AppBar position="fixed">
-                <Toolbar className={classes.toolbar}>
-                    <img className={classes.logo} alt='icon' src={imgLogo}/>
-                    <Button size={window.innerWidth > 450 ? "large" : "small"} variant="contained"
-                            color="default" href={appForm} download="appForm" startIcon={<GetAppIcon />}>Application</Button>
-                </Toolbar>
-            </AppBar>
+                <AppBar position="fixed">
+                    <Toolbar className={classes.toolbar}>
+                        <img className={classes.logo}
+                             alt='icon' src={imgLogo}
+                        />
+                        <div>
+                            <Button
+                                style={{marginRight: '10px'}}
+                                size={window.innerWidth > 450 ? "large" : "small"}
+                                variant="contained"
+                                color="secondary"
+                                onClick={() => props.changeOnVacancies()}
+                            >
+                                {btnShow ? 'About Us' : 'Open Vacancies'}
+                            </Button><Button size={window.innerWidth > 450 ? "large" : "small"}
+                                             variant="contained"
+                                             color="default"
+                                             href={appForm}
+                                             download="appForm"
+                                             startIcon={<GetAppIcon/>}
+                        >
+                            Application
+                        </Button>
+                        </div>
+                    </Toolbar>
+                </AppBar>
             </ElevationScroll>
         </div>
     );

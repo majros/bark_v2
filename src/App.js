@@ -1,9 +1,10 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { createTheme } from '@material-ui/core/styles';
 import { ThemeProvider } from '@material-ui/styles';
 
 import AppBar from './components/AppBar';
-import Layout from './components/Layout';
+import Vacancies from './components/Vacancies';
+import AboutUs from './components/AboutUs';
 
 const theme = createTheme({
     palette: {
@@ -38,10 +39,20 @@ const theme = createTheme({
 });
 
 function App() {
+    const [onVacancies, setOnVacancies] = useState(false);
+
+    if (onVacancies) {
+        return (
+            <ThemeProvider theme={theme} >
+                <AppBar onVacancies changeOnVacancies={() => setOnVacancies(!onVacancies)}/>
+                <Vacancies/>
+            </ThemeProvider>
+        );
+    }
     return (
-        <ThemeProvider theme={theme}>
-            <AppBar />
-            <Layout />
+        <ThemeProvider theme={theme} >
+            <AppBar changeOnVacancies={() => setOnVacancies(!onVacancies)}/>
+            <AboutUs/>
         </ThemeProvider>
     );
 }

@@ -4,13 +4,13 @@ import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
 import Box from "@material-ui/core/Box";
 
-import CardCompanyCadetsContatcus from './CardCompanyCadetsContatcus'
+import TableVacancies from './tableVacancies'
 
-import company from './img/company2.webp';
+import vacancy from './img/manningPeople.webp';
 
 const useStyles = makeStyles({
     container: {
-        backgroundImage: `url(${company})`,
+        backgroundImage: `url(${vacancy})`,
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
@@ -18,8 +18,9 @@ const useStyles = makeStyles({
     },
     });
 
-export default function Layout() {
+export default function Vacancies() {
     const classes = useStyles();
+    const currDate = new Date().toLocaleDateString();
 
     return (
         <React.Fragment>
@@ -27,16 +28,16 @@ export default function Layout() {
                 <div style={{ height: '35%' }}/>
                 <Typography component="div" variant="h2" color="textPrimary">
                     <Box fontFamily="Roboto" textAlign="center" m={1}>
-                        About Us
+                        Vacancies
                     </Box>
                 </Typography>
                 <Typography component="div" variant="h5" color="textPrimary">
                     <Box fontFamily="Roboto" textAlign="center" m={1}>
-                        Meet the amazing team behind this project and find out more about how we work.
+                        Open positions on {currDate}
                     </Box>
                 </Typography>
             </Container>
-            <CardCompanyCadetsContatcus/>
+            <TableVacancies/>
             <Container>
                 <Typography component="div" variant="caption" color="textSecondary">
                     <Box fontFamily="Roboto" textAlign="center" m={1}>

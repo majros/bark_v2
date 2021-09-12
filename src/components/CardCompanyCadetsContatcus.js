@@ -3,12 +3,14 @@ import { makeStyles } from '@material-ui/core/styles';
 import Typography from '@material-ui/core/Typography';
 import Box from "@material-ui/core/Box";
 import Paper from "@material-ui/core/Paper";
+import Button from '@material-ui/core/Button';
 import PinDropIcon from '@material-ui/icons/PinDrop';
 import PhoneIcon from '@material-ui/icons/Phone';
 import MessageIcon from '@material-ui/icons/Message';
+import FacebookIcon from '@material-ui/icons/Facebook';
+import InstagramIcon from '@material-ui/icons/Instagram';
 
 import CardPartners from './CardPartners';
-// import BtnCompanyPartners from './btnCompanyPartners';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -31,14 +33,20 @@ const useStyles = makeStyles((theme) => ({
         paddingTop: theme.spacing(10),
     },
     textBody: {
-        marginLeft: theme.spacing(window.innerWidth > 450 ? 15 : 0),
-        marginRight: theme.spacing(window.innerWidth > 450 ? 15 : 0),
+        marginLeft: theme.spacing(window.innerWidth > 450 ? 15 : 1),
+        marginRight: theme.spacing(window.innerWidth > 450 ? 15 : 1),
     },
     textContactus: {
         display: 'flex',
         alignItems: 'center',
-        marginLeft: theme.spacing(window.innerWidth > 450 ? 15 : 0),
-        marginRight: theme.spacing(window.innerWidth > 450 ? 15 : 0),
+        marginLeft: theme.spacing(window.innerWidth > 450 ? 15 : 1),
+        marginRight: theme.spacing(window.innerWidth > 450 ? 15 : 1),
+    },
+    button: {
+        marginRight: theme.spacing(window.innerWidth > 450 ? 2 : 1),
+        paddingLeft: theme.spacing(window.innerWidth > 450 ? 3 : 1),
+        paddingRight: theme.spacing(window.innerWidth > 450 ? 3 : 1),
+        borderRadius: "20px",
     },
 }));
 
@@ -72,7 +80,6 @@ export default function CardCompanyCadetsContatcus() {
                         </Box>
                     </Typography>
                     <CardPartners/>
-                    {/*<BtnCompanyPartners/>*/}
                     <Typography className={classes.textHeader} component="div" variant="h2" color="textSecondary">
                         <Box fontFamily="Roboto" textAlign="center" fontWeight="fontWeightBold" m={1}>
                             Cadets program
@@ -137,6 +144,24 @@ export default function CardCompanyCadetsContatcus() {
                         <Box fontFamily="Roboto" m={1}>
                             info@bark.com.ua
                         </Box>
+                        <Button
+                            variant="contained"
+                            size="small"
+                            className={classes.button}
+                            style={{backgroundColor: "#3b5998", color: "#FFF"}}
+                            startIcon={<FacebookIcon />}
+                        >
+                            Facebook
+                        </Button>
+                        <Button
+                            variant="contained"
+                            size="small"
+                            className={classes.button}
+                            style={{backgroundColor: "#ea4c89", color: "#FFF"}}
+                            startIcon={<InstagramIcon />}
+                        >
+                            instagram
+                        </Button>
                     </Typography>
                 </Paper>
             </div>
