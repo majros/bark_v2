@@ -124,7 +124,7 @@ export default function CardCompanyCadetsContatcus() {
                     <Typography className={classes.textContactus} component="div" variant="h5" color="secondary">
                         <PhoneIcon fontSize="large"/>
                         <Box fontFamily="Roboto" fontWeight="fontWeightBold" m={1}>
-                            Give us a ring
+                            Give us a call
                         </Box>
                     </Typography>
                     <Typography className={classes.textBody} component="div" variant="body1" color="textSecondary">
