@@ -53,23 +53,25 @@ export default function ButtonAppBar(props) {
                     <Toolbar className={classes.toolbar}>
                         <img className={classes.logo}
                              alt='icon' src={imgLogo}
+                             onClick={() => props.changeGoHome()}
                         />
                         <div>
                             <Button
-                                style={{marginRight: '10px'}}
+                                style={{marginRight: '10px', minWidth: '125px',}}
                                 size={window.innerWidth > 450 ? "large" : "small"}
                                 variant="contained"
                                 color="secondary"
                                 onClick={() => props.changeOnVacancies()}
                             >
                                 {btnShow ? 'About Us' : 'Open Vacancies'}
-                            </Button><Button size={window.innerWidth > 450 ? "large" : "small"}
+                            </Button>
+                            <Button size={window.innerWidth > 450 ? "large" : "small"}
                                              variant="contained"
                                              color="default"
                                              href={appForm}
                                              download="appForm"
                                              startIcon={<GetAppIcon/>}
-                        >
+                            >
                             Application
                         </Button>
                         </div>

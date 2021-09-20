@@ -49,7 +49,7 @@ export default function FullWidthGrid() {
                 <Grid container direction="column" justifyContent="center" alignItems="center" item xs={6} sm={3}>
                     <Avatar className={classes.avatar} alt="ALBERTA" src={imgAlberta}/>
                     <Button className={classes.textGrid} color="primary" size="large" variant="outlined" target='_blank' href='https://albertashipmanagement.com/'>
-                        ALBERTA Shipbrokers
+                        ALBERTA Shipmanagement
                     </Button>
                 </Grid>
                 <Grid container direction="column" justifyContent="center" alignItems="center" item xs={6} sm={3}>

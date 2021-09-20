@@ -44,14 +44,18 @@ function App() {
     if (onVacancies) {
         return (
             <ThemeProvider theme={theme} >
-                <AppBar onVacancies changeOnVacancies={() => setOnVacancies(!onVacancies)}/>
+                <AppBar onVacancies
+                        changeOnVacancies={() => setOnVacancies(!onVacancies)}
+                        changeGoHome={() => setOnVacancies(false)}/>
                 <Vacancies/>
             </ThemeProvider>
         );
     }
     return (
         <ThemeProvider theme={theme} >
-            <AppBar changeOnVacancies={() => setOnVacancies(!onVacancies)}/>
+            <AppBar
+                changeOnVacancies={() => setOnVacancies(!onVacancies)}
+                changeGoHome={() => setOnVacancies(false)}/>
             <AboutUs/>
         </ThemeProvider>
     );

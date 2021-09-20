@@ -14,7 +14,7 @@ const useStyles = makeStyles({
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        height: window.innerWidth > 450 ? '40vh' : '50vh',
+        height: '50vh',
     },
     });
 
@@ -40,7 +40,7 @@ export default function AboutUs() {
             <Container>
                 <Typography component="div" variant="caption" color="textSecondary">
                     <Box fontFamily="Roboto" textAlign="center" m={1}>
-                        www.bark.com.ua © 2021 , made by Creative Team for a better web.
+                        www.bark.com.ua © 2021 , made by Creative Team.
                     </Box>
                 </Typography>
             </Container>
