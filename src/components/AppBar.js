@@ -44,7 +44,6 @@ ElevationScroll.propTypes = {
 export default function ButtonAppBar(props) {
     const classes = useStyles();
     const btnShow = props.onVacancies;
-    console.log(btnShow)
 
     return (
         <div className={classes.root}>

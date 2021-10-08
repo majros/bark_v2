@@ -10,7 +10,7 @@ import MessageIcon from '@material-ui/icons/Message';
 import FacebookIcon from '@material-ui/icons/Facebook';
 import InstagramIcon from '@material-ui/icons/Instagram';
 
-import CardPartners from './CardPartners';
+import CardCadetProgram from './CardCadetProgram';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -48,6 +48,16 @@ const useStyles = makeStyles((theme) => ({
         paddingRight: theme.spacing(window.innerWidth > 450 ? 3 : 1),
         borderRadius: "20px",
     },
+    textContainer: {
+        flexDirection: 'row',
+    },
+    img: {
+        width: '30%',
+        margin: 'auto',
+        display: 'block',
+        maxWidth: '100%',
+        maxHeight: '100%',
+    },
 }));
 
 export default function CardCompanyCadetsContatcus() {
@@ -74,34 +84,7 @@ export default function CardCompanyCadetsContatcus() {
                             of Maritime Labour Convention (MLC 2006) by Russian Maritime Register of Shipping.
                         </Box>
                     </Typography>
-                    <Typography className={classes.textHeader} component="div" variant="h2" color="textSecondary">
-                        <Box fontFamily="Roboto" textAlign="center" fontWeight="fontWeightBold" m={1}>
-                            Our partners
-                        </Box>
-                    </Typography>
-                    <CardPartners/>
-                    <Typography className={classes.textHeader} component="div" variant="h2" color="textSecondary">
-                        <Box fontFamily="Roboto" textAlign="center" fontWeight="fontWeightBold" m={1}>
-                            Cadets program
-                        </Box>
-                    </Typography>
-                    <Typography className={classes.textBody} component="div" variant="body1" color="textSecondary">
-                        <Box fontFamily="Roboto" textAlign="justify" m={1}>
-                            SAMOS Cadets program of Ukrainian Nationality to become eligible for first employment,
-                            candidates must provide verification that they are studying for Bachelor Degree and they are
-                            on fourth year course (third year course completed) Prior second employment following
-                            requirements should be met:<br/>
-                            <li>Excellent evaluations from superintendents, Captains or Chief Engineers during first employment</li>
-                            <li>Evidence of Graduation (submission of Bachelor Diploma / Degree)</li>
-                            <li>Verification that they enrolled to Higher (Master) Degree course</li>
-                            Upon completion of second employment as well as achievement of performance criteria, Cadets
-                            will be promoted to Junior Cadets (a bit older in age) that have been already employed within
-                            Samos Steamship Cadets’ ranks and have been obtained Bachelor degree (+COC) but have not
-                            commenced their higher education will be eligible for promotion to Juniors, upon excellent
-                            performances and verification that they enrolled to Higher (Master) degreeWe are always
-                            available to provide clarifications and/or assistance on implementation of am policy scheme
-                        </Box>
-                    </Typography>
+                    <CardCadetProgram/>
                     <Typography className={classes.textHeader} component="div" variant="h2" color="textSecondary">
                         <Box fontFamily="Roboto" textAlign="center" fontWeight="fontWeightBold" m={1}>
                             Want to work with us?
@@ -159,6 +142,8 @@ export default function CardCompanyCadetsContatcus() {
                             className={classes.button}
                             style={{backgroundColor: "#ea4c89", color: "#FFF"}}
                             startIcon={<InstagramIcon />}
+                            target='_blank'
+                            href={'https://www.instagram.com/bark_agency/?hl=ru'}
                         >
                             instagram
                         </Button>

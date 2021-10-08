@@ -40,7 +40,7 @@ export default function AboutUs() {
             <Container>
                 <Typography component="div" variant="caption" color="textSecondary">
                     <Box fontFamily="Roboto" textAlign="center" m={1}>
-                        www.bark.com.ua © 2021 , made by Creative Team.
+                        www.bark.com.ua © 1992-2021 , made by Creative Team.
                     </Box>
                 </Typography>
             </Container>
