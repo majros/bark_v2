@@ -112,9 +112,9 @@ export default function CardCompanyCadetsContatcus() {
                     </Typography>
                     <Typography className={classes.textBody} component="div" variant="body1" color="textSecondary">
                         <Box fontFamily="Roboto" m={1}>
-                            <b>Samos/Alberta/Offen</b> +38 0629 41-36-(25) (38)
+                            +38 0629 41-36-<b>(25) (38)</b>
                             <br/>
-                            <b>Nomikos</b> +38 0629 41-71-(48) (49) (50)
+                            +38 0629 41-71-<b>(48) (49) (50)</b>
                         </Box>
                     </Typography>
                     <Typography className={classes.textContactus} component="div" variant="h5" color="secondary">
